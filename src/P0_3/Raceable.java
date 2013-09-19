@@ -11,9 +11,11 @@ public interface Raceable {
 
     public static final int FINISH = 100;
 
-    public String stride();
+    public void stride();
     public boolean isFinished();
     public String exclaimVictory();
+    public void printMe();
+    public void reset();
 
 
 }

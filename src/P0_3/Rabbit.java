@@ -1,5 +1,3 @@
-
-
 package P0_3;
 
 import java.io.File;
@@ -11,19 +9,18 @@ import java.util.Scanner;
  * Created with IntelliJ IDEA.
  * User: ag
  * Date: 9/18/13
- * Time: 9:27 PM
+ * Time: 9:58 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Godzilla implements Raceable {
-
+public class Rabbit implements Raceable {
 
     private int mStride;
-    private final int FEET = 15;     //2
-    private final double mSpeed = .05;   //percentage  //.80
+    private final int FEET = 3;
+    private final double mSpeed = .81;
     private Random mRandom;
 
 
-    public Godzilla() {
+    public Rabbit() {
         mStride = 0;
         mRandom = new Random();
     }
@@ -31,15 +28,16 @@ public class Godzilla implements Raceable {
     @Override
     public void stride() {
 
+
         if (mRandom.nextInt(100) * mSpeed > 4) {
             mStride += FEET;
         }
-
-        System.out.print("Godzilla >");
+        System.out.print("Rabbit   >");
         for (int nC = 0; nC < mStride; nC++) {
             System.out.print("*");
         }
         System.out.println();
+
     }
 
     @Override
@@ -49,17 +47,13 @@ public class Godzilla implements Raceable {
 
     @Override
     public String exclaimVictory() {
-        return "Tokyo is destroyed! GGGRRRRRRRRAAAAA.\n\n";
-
+        return "What's up doc.\n\n";
     }
-
-
-
 
     @Override
     public void printMe() {
 
-        String strPath =  System.getProperty("user.dir") + "//src//P0_3//godzilla.txt";
+        String strPath =  System.getProperty("user.dir") + "//src//P0_3//rabbit.txt";
         Scanner in;
         File fileInput = new File(strPath);
         try {
@@ -74,6 +68,8 @@ public class Godzilla implements Raceable {
         }
 
 
+
+
     }
 
     @Override
@@ -81,9 +77,4 @@ public class Godzilla implements Raceable {
         mStride = 0;
     }
 
-
 }
-
-
-
-
