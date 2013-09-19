@@ -37,7 +37,7 @@ public class Godzilla implements Raceable {
 
         System.out.print("Godzilla >");
         for (int nC = 0; nC < mStride; nC++) {
-            System.out.print("*");
+            System.out.print("@");
         }
         System.out.println();
     }
@@ -56,23 +56,24 @@ public class Godzilla implements Raceable {
 
 
 
-    @Override
-    public void printMe() {
 
+    @Override
+    public String toString() {
+        String strR = "";
         String strPath =  System.getProperty("user.dir") + "//src//P0_3//godzilla.txt";
         Scanner in;
         File fileInput = new File(strPath);
         try {
             in = new Scanner(fileInput);
         } catch (FileNotFoundException e) {
-            System.out.println("There's been an error: " + e.getMessage());
-            return;
+            return "There's been an error: " + e.getMessage();
+
         }
 
         while(in.hasNextLine()){
-            System.out.println(in.nextLine());
+            strR += in.nextLine() + "\n";
         }
-
+        return strR;
 
     }
 

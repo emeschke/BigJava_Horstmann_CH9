@@ -14,7 +14,6 @@ public interface Raceable {
     public void stride();
     public boolean isFinished();
     public String exclaimVictory();
-    public void printMe();
     public void reset();
 
 
