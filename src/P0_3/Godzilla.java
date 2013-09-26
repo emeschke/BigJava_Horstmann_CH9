@@ -2,10 +2,7 @@
 
 package P0_3;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,11 +18,13 @@ public class Godzilla implements Raceable {
     private final int FEET = 15;     //2
     private final double mSpeed = .05;   //percentage  //.80
     private Random mRandom;
+    private String mAscii;
 
 
     public Godzilla() {
         mStride = 0;
         mRandom = new Random();
+        setAscii(FileOps.convertFileToString("//src//P0_3//godzilla.txt"));
     }
 
     @Override
@@ -53,27 +52,9 @@ public class Godzilla implements Raceable {
 
     }
 
-
-
-
-
     @Override
     public String toString() {
-        String strR = "";
-        String strPath =  System.getProperty("user.dir") + "//src//P0_3//godzilla.txt";
-        Scanner in;
-        File fileInput = new File(strPath);
-        try {
-            in = new Scanner(fileInput);
-        } catch (FileNotFoundException e) {
-            return "There's been an error: " + e.getMessage();
-
-        }
-
-        while(in.hasNextLine()){
-            strR += in.nextLine() + "\n";
-        }
-        return strR;
+      return  getAscii();
 
     }
 
@@ -82,7 +63,13 @@ public class Godzilla implements Raceable {
         mStride = 0;
     }
 
+    public String getAscii() {
+        return mAscii;
+    }
 
+    public void setAscii(String ascii) {
+        mAscii = ascii;
+    }
 }
 
 

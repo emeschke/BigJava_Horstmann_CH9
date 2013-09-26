@@ -1,9 +1,8 @@
 package P0_3;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+
 import java.util.Random;
-import java.util.Scanner;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,11 +17,13 @@ public class Rabbit implements Raceable {
     private final int FEET = 3;
     private final double mSpeed = .81;
     private Random mRandom;
+    private String mAscii;
 
 
     public Rabbit() {
         mStride = 0;
         mRandom = new Random();
+        setAscii(FileOps.convertFileToString("//src//P0_3//rabbit.txt"));
     }
 
     @Override
@@ -52,27 +53,21 @@ public class Rabbit implements Raceable {
 
     @Override
     public String toString() {
-        String strR = "";
-        String strPath =  System.getProperty("user.dir") + "//src//P0_3//rabbit.txt";
-        Scanner in;
-        File fileInput = new File(strPath);
-        try {
-            in = new Scanner(fileInput);
-        } catch (FileNotFoundException e) {
-            return "There's been an error: " + e.getMessage();
-
-        }
-
-        while(in.hasNextLine()){
-            strR += in.nextLine() + "\n";
-        }
-        return strR;
+        return  getAscii();
 
     }
 
     @Override
     public void reset() {
         mStride = 0;
+    }
+
+    public String getAscii() {
+        return mAscii;
+    }
+
+    public void setAscii(String ascii) {
+        mAscii = ascii;
     }
 
 }
