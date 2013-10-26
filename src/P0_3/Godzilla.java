@@ -24,7 +24,7 @@ public class Godzilla implements Raceable {
     public Godzilla() {
         mStride = 0;
         mRandom = new Random();
-        setAscii(FileOps.convertFileToString("//src//P0_3//godzilla.txt"));
+        setAscii(FileOps.convertFileToString("//proInterfaces//src//P0_3//godzilla.txt"));
     }
 
     @Override

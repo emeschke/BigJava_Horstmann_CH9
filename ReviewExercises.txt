@@ -2,8 +2,51 @@
 # Use this file to answer Review Exercises from the Big Java textbook
 #########################################################################
 
+P9.1--
+A. Superclass, Employee; Subclass, Manager
+B. Superclass, Student; Subclass, GraduateStudent
+C. Superclass, Person; Subclass, Student
+D. Superclass, Employee; Subclass, Professor
+E. Superclass, BankAccount; Subclass, CheckingAccount
+F. Superclass, Vehicle; Subclass, Car
+G. Superclass, Vehicle; Subclass, Minivan
+H. Superclass, Car; Subclass, Minivan
+I. Superclass, Vehicle; Subclass, Truck
 
+P9.4--
+Inherit: deposit, getBalance
+Override: withdraw, monthEnd
+Add: SavingsAccount (constructor), setInterestRate
 
+P9.6--
+A. No, sandwich is not a subclass of sub.
+B. Yes, sub is a subclass of sandwich.
+C. Yes, sandwich is a superclass of sub.
+D. No, sub is a subclass of sandwich.
+
+P9.7--
+P9.8--
+P9.9--
+
+P9.10-- One is a cast of an object to an object, the other is a cast of a primitive to a primitive.  The types of
+the object<-->object must be of the same hierarchy, otherwise the cast won't work.
+
+P9.11--
+A.true
+B.true
+C.false
+D.true
+E.true
+F.false
+
+P9.13--
+
+P9.14--
+A. No, Edible is not a subclass of Sandwich
+B. Yes, Sandwich is a subclass of Edible
+C. Yes, don't even need to cast e
+D. No, Rectangle is a different type.
+**********NOt done
 
 
 

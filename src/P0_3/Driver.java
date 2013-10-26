@@ -1,5 +1,11 @@
 package P0_3;
 
+import java.io.Closeable;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.io.Writer;
+import java.rmi.server.LogStream;
+
 /**
  Name your packages according to its Programming Exercise identifier, except replace the period with underscore.
  For example, if the Programming Exercise identifier is P1.15, then name your package P1_15
@@ -21,7 +27,7 @@ public class Driver {
 
 
 
-
+        /*
         Raceable racOne = new Rabbit();
         Raceable racTwo = new Godzilla();
 
@@ -44,8 +50,18 @@ public class Driver {
             }
             racOne.reset();
             racTwo.reset();
-        }
+        */
+        System.out.println(System.out instanceof PrintStream);
+        System.out.println(System.out instanceof OutputStream);
+        System.out.println(System.out instanceof LogStream);
+        System.out.println(System.out instanceof Object);
+        System.out.println(System.out instanceof Closeable);
+        //System.out.println(System.out instanceof Writer);
+
+
 
     }
+
+
 
 }
