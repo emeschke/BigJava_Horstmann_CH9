@@ -24,9 +24,12 @@ B. Yes, sub is a subclass of sandwich.
 C. Yes, sandwich is a superclass of sub.
 D. No, sub is a subclass of sandwich.
 
-P9.7--
-P9.8--
-P9.9--
+P9.7--Included in src.
+P9.8--Included in src.  Minivan is a vehicle, but SUV inherits from Truck.  This is what I believe about SUV's.  Also
+a bicycle is a vehicle and inherits from it.  Depending on your point of view, it might be a separate category
+adjacent to vehicle.
+P9.9--DepartmentChair and SeminarSpeaker inherit from Professor, that seemed natural, but TeachingAssistant is a
+separate assistant.
 
 P9.10-- One is a cast of an object to an object, the other is a cast of a primitive to a primitive.  The types of
 the object<-->object must be of the same hierarchy, otherwise the cast won't work.
@@ -40,13 +43,19 @@ E.true
 F.false
 
 P9.13--
+A. No.
+B. Yes, the two interfaces didn't inherit from each other.
+C. No.
 
 P9.14--
 A. No, Edible is not a subclass of Sandwich
 B. Yes, Sandwich is a subclass of Edible
 C. Yes, don't even need to cast e
 D. No, Rectangle is a different type.
-**********NOt done
+E. No, the type of Rectangle and Edible are not related.
+F. No, can't cast an object to an unrelated type.
+G. No, can't cast an object to an unrelated type.
+H. No, can't cast an object reference to refer to an unrelated type.
 
 
 
